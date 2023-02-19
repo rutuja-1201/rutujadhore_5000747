@@ -1,0 +1,17 @@
+<form [formGroup]="bookingform" (ngSubmit)="onSubmit()">
+    <label>
+      Number of Tickets:
+      <input type="number" formControlName="Tickets">
+    </label>
+  <br>
+  <br>
+    <label>
+      Showtime:
+      <input type="datetime-local" formControlName="showtime">
+    </label>
+    <br>
+    <br>
+  
+    <button type="submit">Update Booking</button>
+  </form>
+  

@@ -1,0 +1,34 @@
+<!--<h2>Add Movie Booking</h2>
+<form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Movie ID:</label>
+    <input formControlName="movieId" />
+    <div *ngIf="movieForm.get('movieId').invalid && (movieForm.get('movieId').dirty || movieForm.get('movieId').touched)">
+      <div *ngIf="movieForm.get('movieId').errors.required">Movie ID is required</div>
+      <div *ngIf="movieForm.get('movieId').errors.pattern">Movie ID should be a number between 1 to 300</div>
+    </div>
+  </div>
+
+  <div>
+    <label>Movie Name:</label>
+    <input formControlName="movieName" />
+    <div *ngIf="movieForm.get('movieName').invalid && (movieForm.get('movieName').dirty || movieForm.get('movieName').touched)">
+      <div *ngIf="movieForm.get('movieName').errors.required">Movie name is required</div>
+      <div *ngIf="movieForm.get('movieName').errors.maxLength">Movie name can't be more than 20 characters</div>
+      <div *ngIf="movieForm.get('movieName').errors.pattern">Movie name should be alphanumeric</div>
+    </div>
+  </div>
+
+  <div>
+    <label>Booking Date:</label>
+    <input type="date" formControlName="movieBookingdate" />
+    <div *ngIf="movieForm.get('movieBookingdate').invalid && (movieForm.get('movieBookingdate').dirty || movieForm.get('movieBookingdate').touched)">
+      <div *ngIf="movieForm.get('movieBookingdate').errors.required">Booking date is required</div>
+    </div>
+  </div>
+
+  <div>
+    <label>No of Tickets:</label>
+    <input type="number" formControlName="noOfTickets" />
+    <div *ngIf="movieForm.get('noOfTickets').invalid && (movieForm.get('noOfTickets').dirty || movieForm.get('noOfTickets').touched)">
+    </div>-->
