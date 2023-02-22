@@ -1,0 +1,29 @@
+<p>courses-list works!</p>
+<h2>Course Details</h2>
+Select a course to view <select #course (change)="course.name=course.value">
+  <option value="Node js">Node js</option>
+  <option value="Typescript">Typescript</option>
+  <option value="Angular">Angular</option>
+  <option value="Reactjs">Reactjs</option>
+</select><br/><br/>
+
+<table border="1" *ngIf="cName">
+    <thead>
+        <tr>
+            <th>
+                Course ID
+            </th>
+            <th>Course Name</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let c of courses">
+            <td *ngIf ="c.courseName== cName">{{c.courseId}}</td>
+        
+        <td *ngIf ="c.courseName==cName">{{c.courseName}}</td>
+        
+        
+        </tr>
+    </tbody>
+</table>

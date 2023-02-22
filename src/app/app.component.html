@@ -1,13 +1,15 @@
-	<div>
-<p>
-{{ "product details" | titlecase }} ;
-{{"SJADUCNJSHXUJ "| lowercase}}</p>
 
-<div>
-    Todays Date is: {{ today }}
-  </div>
 
-  <div>
-    <app-cust [myinputMsg]="my input message"></app-cust>
-  </div>
-</div>
+<html>
+
+<body>
+    <a routerLink="app-addemp" style="margin:20px;">Add Employee</a>
+    <a routerLink="app-listemp" style="margin:20px;">List employees</a>
+
+    <button class="btn btn-primary" onclick="window.location.href='app-addemp'">
+        Click Here
+      </button>
+<router-outlet></router-outlet>
+</body>
+
+</html>

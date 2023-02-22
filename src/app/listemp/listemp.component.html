@@ -1,0 +1,35 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+  <table class="table container">
+
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>UPDATION</th>
+      <th>DELETION</th>
+
+    </tr>
+    <tr *ngFor="let e of employees">
+      <td>
+        {{e.id}}
+      </td>
+      <td>
+        {{e.name}}
+      </td>
+      <td>
+        <button (click)="update(e.id)" class="btn btn-primary" type="button">UPDATE</button>
+      </td>
+      <td>
+        <button (click)="delete(e.id)" class="btn btn-secondary" type="button">DELETE</button>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

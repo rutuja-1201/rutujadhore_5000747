@@ -1,31 +1,28 @@
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgModule } from '@angular/core';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Form1Component } from './form1/form1.component';
-import { CustComponent } from './cust/cust.component';
-import { SqrPipe } from './sqr.pipe';
-import { DateserviceService } from './dateservice.service';
-
-
-
+import { ListempComponent } from './listemp/listemp.component';
+import { AddempComponent } from './addemp/addemp.component';
+import { HttpClient,HttpClientModule } from '@angular/common/http';
+import { EserviceService } from './eservice.service';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Form1Component,
-    CustComponent,
-    SqrPipe,
-   
+    ListempComponent,
+    AddempComponent,
+    UpdateComponent,
+
+     
   ],
-  imports: [
+  imports: [FormsModule,ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    AppRoutingModule,HttpClientModule
   ],
-  providers: [DateserviceService],
+  providers: [HttpClient,EserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
