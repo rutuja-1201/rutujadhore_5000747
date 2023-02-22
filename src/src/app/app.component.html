@@ -1,0 +1,67 @@
+<div class="form">
+  <h2 id="registration">Registration Form</h2>
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+      <div ngModelGroup="personDetails" #personalDetail="ngModelGroup">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" placeholder="Your name.."
+        name="firstname" ngModel required #fname="ngModel">
+        
+          <small *ngIf="fname.invalid && fname.touched">First Name is a required field</small>
+          <br>
+          <span *ngIf="firstname">You entered {{firstname}}</span>
+        
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" placeholder="last name"
+        name="lastname" ngModel required>
+        
+          <small *ngIf="fname.invalid && fname.touched">last Name is a required field</small>
+          <br>
+          <span *ngIf="lastname">You entered {{lastname}}</span>
+        
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your  email"
+        name="email" ngModel required email>
+
+        <div>
+          <small *ngIf="personalDetail.invalid && personalDetail.touched">Invalid email</small>
+        </div>
+        
+      </div>
+      
+      <label for="country">City</label>
+      <select id="country" name="country" [ngModel]="defaultCountry">
+        <option value="australia">Hyderabad</option>
+        <option value="canada">Pune</option>
+        <option value="usa">Nagpur</option>
+        <option value="india">Bangalore</option>
+        <option value="uk">Mumbai</option>
+      </select>
+
+      <label for="gender">Gender:</label>
+      <span *ngFor="let gen of gender">
+        <input type="radio" id="{{gen.id}}" value="{{gen.value}}" name="gender" [ngModel]="defaultGender">
+        <label for="male">{{gen.value}}</label>
+      </span>
+      <br><br>
+      <label>Area of Interest<i>(Optional)</i></label>
+      <div class="form-inline">
+          <label><input type="checkbox" value="sports" name="hobbies" ngModel> Web Development</label>
+          <label><input type="checkbox" value="movies" name="hobbies" ngModel> Blockchain</label>
+          <label><input type="checkbox" value="music" name="hobbies" ngModel> Machine Learning</label>
+      </div>
+    
+      <input type="submit" value="Submit" id="btn"><!--[disabled]="!myForm.valid"-->
+    </form>
+</div>
+
+<!--<div class="form-data">
+  <h3>Form Data</h3>
+  <p>First Name: <b>{{firstname}}</b></p>
+  <p>Last Name: <b>{{lastname}}</b></p>
+  <p>Email: <b>{{email}}</b></p>
+  <p>Country: <b>{{country}}</b></p>
+  <p>Gender: <b>{{gen}}</b></p>
+</div>-->

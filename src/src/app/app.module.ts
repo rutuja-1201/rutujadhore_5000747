@@ -4,28 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Form1Component } from './form1/form1.component';
-import { CustComponent } from './cust/cust.component';
-import { SqrPipe } from './sqr.pipe';
-import { DateserviceService } from './dateservice.service';
-
-
-
 
 @NgModule({
   declarations: [
-    AppComponent,
-    Form1Component,
-    CustComponent,
-    SqrPipe,
-   
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [DateserviceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

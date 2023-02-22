@@ -1,33 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <table>
-    <thead>
-      <tr>
-        <th>OrderId</th>
-        <th>Product Name</th>
-        <th>Product Quantity</th>
-        <th>Billamount</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let product of orders">
-        <td *ngIf="product.transaction === 'completed'">{{product.orderId}}</td>
-        <td *ngIf="product.transaction === 'completed'">{{product.productName}}</td>
-        <td *ngIf="product.transaction=== 'completed'">{{product.quantity}}</td>
-        <td *ngIf="product.transaction=== 'completed'">{{product.billAmount}}</td>
-      
-      </tr>
-    </tbody>
-  </table>
-  
+	<div>
+<p>
+{{ "product details" | titlecase }} ;
+{{"SJADUCNJSHXUJ "| lowercase}}</p>
 
+<div>
+    Todays Date is: {{ today }}
+  </div>
 
-</body>
-</html>
+  <div>
+    <app-cust [myinputMsg]="my input message"></app-cust>
+  </div>
+</div>
